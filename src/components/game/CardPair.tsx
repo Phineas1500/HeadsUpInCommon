@@ -31,8 +31,8 @@ export function CardPair({ leftName, rightName, onTap }: CardPairProps) {
 
   return (
     <div className="flex gap-3 p-3 h-full">
-      <GameCard name={leftName} onTap={() => handleTap('left')} color="from-indigo-600 to-purple-700" />
-      <GameCard name={rightName} onTap={() => handleTap('right')} color="from-fuchsia-600 to-pink-700" />
+      <GameCard name={leftName} onTap={() => handleTap('left')} color="from-rose to-primary-dark" />
+      <GameCard name={rightName} onTap={() => handleTap('right')} color="from-teal to-blue" />
     </div>
   );
 }
@@ -46,7 +46,7 @@ interface GameCardProps {
 function GameCard({ name, onTap, color }: GameCardProps) {
   return (
     <motion.button
-      className={`flex-1 rounded-3xl bg-gradient-to-br ${color} flex items-center justify-center cursor-pointer shadow-lg active:shadow-inner border-2 border-white/20`}
+      className={`flex-1 rounded-3xl bg-gradient-to-br ${color} flex items-center justify-center cursor-pointer shadow-lg active:shadow-inner border-2 border-white/30`}
       onClick={onTap}
       whileTap={{ scale: 0.97 }}
     >

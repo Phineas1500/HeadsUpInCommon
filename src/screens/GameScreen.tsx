@@ -44,7 +44,7 @@ export function GameScreen() {
     >
       {/* Portrait overlay */}
       {isPortrait && (
-        <div className="absolute inset-0 z-40 bg-black/90 flex flex-col items-center justify-center gap-4">
+        <div className="absolute inset-0 z-40 bg-text/90 flex flex-col items-center justify-center gap-4">
           <motion.div
             animate={{ rotate: 90 }}
             transition={{ repeat: Infinity, duration: 1.5, repeatType: 'reverse' }}
@@ -52,7 +52,7 @@ export function GameScreen() {
           >
             📱
           </motion.div>
-          <p className="text-white text-xl font-semibold">Rotate to landscape</p>
+          <p className="text-base text-xl font-semibold">Rotate to landscape</p>
         </div>
       )}
 
@@ -72,7 +72,7 @@ export function GameScreen() {
         {/* Skip button */}
         <button
           onClick={skipBoth}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white/10 hover:bg-white/20 active:bg-white/25 text-white/60 hover:text-white/80 px-5 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-white/10 transition-colors cursor-pointer"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-surface/80 hover:bg-surface-light active:bg-surface-lighter text-subtext hover:text-text px-5 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-surface-lighter transition-colors cursor-pointer"
         >
           Skip Both
         </button>
@@ -80,8 +80,8 @@ export function GameScreen() {
 
       {/* Quit confirmation modal */}
       <Modal open={showQuit} onClose={() => setShowQuit(false)}>
-        <h3 className="text-lg font-bold mb-3">Quit game?</h3>
-        <p className="text-white/60 mb-5">Your progress will be lost.</p>
+        <h3 className="text-lg font-bold text-text mb-3">Quit game?</h3>
+        <p className="text-subtext mb-5">Your progress will be lost.</p>
         <div className="flex gap-3">
           <Button variant="secondary" className="flex-1" onClick={() => setShowQuit(false)}>
             Cancel

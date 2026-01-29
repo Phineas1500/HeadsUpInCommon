@@ -15,7 +15,7 @@ export function TimerPicker({ value, onChange }: TimerPickerProps) {
           className={`flex-1 py-2.5 rounded-xl font-medium text-sm transition-colors cursor-pointer ${
             value === seconds
               ? 'bg-primary text-white'
-              : 'bg-white/10 text-white/60 hover:bg-white/15'
+              : 'bg-surface-light text-subtext hover:bg-surface-lighter'
           }`}
         >
           {seconds}s

@@ -25,22 +25,22 @@ export function SetupScreen() {
       className="flex-1 flex flex-col overflow-hidden"
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 shrink-0">
+      <div className="flex items-center justify-between px-4 py-3 shrink-0 border-b border-surface-lighter">
         <button
           onClick={() => setScreen('home')}
-          className="text-white/60 hover:text-white text-sm font-medium cursor-pointer"
+          className="text-subtext hover:text-text text-sm font-medium cursor-pointer"
         >
           &larr; Back
         </button>
-        <h2 className="text-lg font-bold">Game Setup</h2>
+        <h2 className="text-lg font-bold text-text">Game Setup</h2>
         <div className="w-12" />
       </div>
 
       {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-6">
+      <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-6 pt-4">
         {/* Categories */}
         <section>
-          <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
+          <h3 className="text-sm font-semibold text-subtext uppercase tracking-wider mb-3">
             Categories
           </h3>
           <DeckSelector enabledCategories={settings.enabledCategories} onToggle={toggleCategory} />
@@ -48,7 +48,7 @@ export function SetupScreen() {
 
         {/* Custom Names */}
         <section>
-          <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
+          <h3 className="text-sm font-semibold text-subtext uppercase tracking-wider mb-3">
             Custom Names
           </h3>
           <CustomNameInput
@@ -60,14 +60,14 @@ export function SetupScreen() {
 
         {/* Timer */}
         <section>
-          <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
+          <h3 className="text-sm font-semibold text-subtext uppercase tracking-wider mb-3">
             Timer
           </h3>
           <TimerPicker value={settings.timerSeconds} onChange={setTimerSeconds} />
         </section>
 
         {/* Pool size info */}
-        <div className="text-center text-sm text-white/40">
+        <div className="text-center text-sm text-overlay">
           {poolSize} names in pool
           {!canStart && (
             <span className="text-danger ml-2">(need at least 10)</span>

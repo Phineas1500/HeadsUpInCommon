@@ -7,11 +7,11 @@ export function Timer({ seconds }: TimerProps) {
   const secs = seconds % 60;
   const display = minutes > 0 ? `${minutes}:${String(secs).padStart(2, '0')}` : `${secs}`;
 
-  let colorClass = 'text-success';
+  let colorClass = 'text-teal';
   if (seconds <= 5) {
-    colorClass = 'text-danger';
+    colorClass = 'text-rose';
   } else if (seconds <= 15) {
-    colorClass = 'text-warning';
+    colorClass = 'text-accent';
   }
 
   return (

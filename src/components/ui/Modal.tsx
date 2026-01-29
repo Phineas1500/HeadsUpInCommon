@@ -14,7 +14,7 @@ export function Modal({ open, onClose, children }: ModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-text/40"
           onClick={onClose}
         >
           <motion.div
@@ -22,7 +22,7 @@ export function Modal({ open, onClose, children }: ModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-surface-light rounded-2xl p-6 max-w-sm w-[90%] shadow-2xl"
+            className="bg-base rounded-2xl p-6 max-w-sm w-[90%] shadow-2xl border border-surface-lighter"
           >
             {children}
           </motion.div>

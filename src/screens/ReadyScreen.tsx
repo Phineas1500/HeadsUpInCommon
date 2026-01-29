@@ -29,15 +29,15 @@ export function ReadyScreen() {
         >
           📱
         </motion.div>
-        <h2 className="text-2xl font-bold">Ready?</h2>
-        <p className="text-white/60 max-w-xs mx-auto">
-          Hold the phone up in <strong className="text-white">landscape mode</strong>.
+        <h2 className="text-2xl font-bold text-text">Ready?</h2>
+        <p className="text-subtext max-w-xs mx-auto">
+          Hold the phone up in <strong className="text-text">landscape mode</strong>.
           Others will describe what the two people have in common.
           Tap the card when someone guesses it, or{' '}
-          <strong className="text-white">tilt the phone</strong> left or right!
+          <strong className="text-text">tilt the phone</strong> left or right!
         </p>
-        <p className="text-white/40 text-sm max-w-xs mx-auto">
-          Can't find a connection? Hit <strong className="text-white/60">Skip Both</strong> to get new cards.
+        <p className="text-overlay text-sm max-w-xs mx-auto">
+          Can't find a connection? Hit <strong className="text-subtext">Skip Both</strong> to get new cards.
         </p>
       </div>
 
