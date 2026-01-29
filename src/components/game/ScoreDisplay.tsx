@@ -7,7 +7,7 @@ interface ScoreDisplayProps {
 export function ScoreDisplay({ score }: ScoreDisplayProps) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-white/60 text-sm font-medium">Score</span>
+      <span className="text-subtext text-sm font-medium">Score</span>
       <AnimatePresence mode="wait">
         <motion.span
           key={score}

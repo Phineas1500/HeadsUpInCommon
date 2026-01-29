@@ -1,17 +1,29 @@
 @import "tailwindcss";
 
+/* Rosé Pine Light palette — matching ramaway.com */
 @theme {
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #4f46e5;
-  --color-accent: #f59e0b;
-  --color-accent-light: #fbbf24;
-  --color-surface: #1e1b4b;
-  --color-surface-light: #312e81;
-  --color-surface-lighter: #3730a3;
-  --color-danger: #ef4444;
-  --color-success: #22c55e;
-  --color-warning: #eab308;
+  --color-primary: #b4637a;
+  --color-primary-light: #c67a90;
+  --color-primary-dark: #9e5068;
+  --color-accent: #ea9d34;
+  --color-accent-light: #f0b05c;
+  --color-surface: #e6dbd1;
+  --color-surface-light: #dcd3cb;
+  --color-surface-lighter: #d1c9c2;
+  --color-danger: #b4637a;
+  --color-success: #56949f;
+  --color-warning: #ea9d34;
+  --color-base: #eee6dd;
+  --color-mantle: #e6dbd1;
+  --color-crust: #ddd0c6;
+  --color-text: #575279;
+  --color-subtext: #797593;
+  --color-overlay: #9893a5;
+  --color-rose: #b4637a;
+  --color-teal: #56949f;
+  --color-blue: #286983;
+  --color-mauve: #907aa9;
+  --color-peach: #d6817d;
 }
 
 * {
@@ -21,9 +33,9 @@
 body {
   margin: 0;
   min-height: 100dvh;
-  background: linear-gradient(135deg, #0f0a2e 0%, #1e1b4b 50%, #1a0a3e 100%);
-  color: white;
-  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-base);
+  color: var(--color-text);
+  font-family: Georgia, 'Times New Roman', serif;
   overflow: hidden;
   user-select: none;
 }

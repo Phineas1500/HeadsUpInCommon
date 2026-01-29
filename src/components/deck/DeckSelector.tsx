@@ -19,12 +19,12 @@ export function DeckSelector({ enabledCategories, onToggle }: DeckSelectorProps)
             onClick={() => onToggle(cat.id)}
             className={`flex items-center gap-2 px-3 py-3 rounded-xl text-left transition-colors cursor-pointer ${
               isEnabled
-                ? 'bg-primary/30 border-2 border-primary'
-                : 'bg-white/5 border-2 border-transparent'
+                ? 'bg-primary/20 border-2 border-primary'
+                : 'bg-surface-light border-2 border-transparent'
             }`}
           >
             <span className="text-xl">{cat.emoji}</span>
-            <span className={`text-sm font-medium ${isEnabled ? 'text-white' : 'text-white/50'}`}>
+            <span className={`text-sm font-medium ${isEnabled ? 'text-primary-dark' : 'text-subtext'}`}>
               {cat.label}
             </span>
           </motion.button>

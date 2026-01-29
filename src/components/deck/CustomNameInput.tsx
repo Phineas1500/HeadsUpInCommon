@@ -25,7 +25,7 @@ export function CustomNameInput({ customNames, onAdd, onRemove }: CustomNameInpu
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
           placeholder="Add a custom name..."
-          className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 outline-none focus:border-primary"
+          className="flex-1 bg-surface-light border border-surface-lighter rounded-xl px-4 py-2.5 text-text placeholder-overlay outline-none focus:border-primary"
         />
         <button
           onClick={handleAdd}
@@ -40,12 +40,12 @@ export function CustomNameInput({ customNames, onAdd, onRemove }: CustomNameInpu
           {customNames.map((name) => (
             <span
               key={name}
-              className="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full text-sm"
+              className="inline-flex items-center gap-1 bg-surface-light px-3 py-1 rounded-full text-sm text-text"
             >
               {name}
               <button
                 onClick={() => onRemove(name)}
-                className="text-white/50 hover:text-white ml-1 cursor-pointer"
+                className="text-overlay hover:text-text ml-1 cursor-pointer"
               >
                 ×
               </button>
